@@ -71,7 +71,7 @@ When you send people sensitive info like passwords and private links via email o
     $ [edit settings in /etc/onetime/redis.conf]
 
     $ redis-server /etc/onetime/redis.conf
-    $ bundle exec thin -e dev -R config.ru -p 7143 start
+    $ bundle exec thin -e dev -R config_app.ru -p 7143 start
 
 ## Generating a global secret
 

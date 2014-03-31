@@ -31,6 +31,8 @@ gem 'httparty', '0.7.7'
 gem 'mail', '2.5.4'
 
 gem 'cramp', '0.15.2'
+gem 'async-rack', '0.5.1'
+gem 'http_router', '0.11.0'
 
 # bundle install --frozen --deployment --without=dev
 group :dev do

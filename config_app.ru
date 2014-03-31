@@ -1,8 +1,8 @@
-# Onetime Rackup
+# Onetime Rackup - App
 #
 # Usage:
 #
-#     $ bundle exec thin -e dev -R config.ru -p 7143 start
+#     $ bundle exec thin -e dev -R config_app.ru -p 7143 start
 #     $ tail -f /var/log/system.log
 
 ENV['RACK_ENV'] ||= 'prod'
@@ -21,7 +21,7 @@ APP_DIR = "#{ENV['APP_ROOT']}/lib/onetime/app"
 
 apps = {
   '/'          => Otto.new("#{APP_DIR}/web/routes"),
-  '/api'    => Otto.new("#{APP_DIR}/api/routes"),
+  '/api'       => Otto.new("#{APP_DIR}/api/routes"),
   '/colonel'   => Otto.new("#{APP_DIR}/colonel/routes"),
 }
 
@@ -40,9 +40,9 @@ if Otto.env?(:dev)
       run app
     }
   end
-  map("/app/")      { run Rack::File.new("#{PUBLIC_DIR}/app") }
-  map("/etc/")      { run Rack::File.new("#{PUBLIC_DIR}/etc") }
-  map("/img/")      { run Rack::File.new("#{PUBLIC_DIR}/img") }
+  map('/app/')      { run Rack::File.new("#{PUBLIC_DIR}/app") }
+  map('/etc/')      { run Rack::File.new("#{PUBLIC_DIR}/etc") }
+  map('/img/')      { run Rack::File.new("#{PUBLIC_DIR}/img") }
 else
   # PROD: run barebones webapps
   apps.each_pair do |path,app|

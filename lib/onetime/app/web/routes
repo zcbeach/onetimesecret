@@ -22,6 +22,8 @@ GET   /info/privacy                              Onetime::App::Info#privacy
 GET   /info/security                             Onetime::App::Info#security
 GET   /info/terms                                Onetime::App::Info#terms
 
+GET   /chat                                      Onetime::App::Chat#index
+
 GET   /pricing                                   Onetime::App#pricing
 #GET   /business                                  Onetime::App#business_pricing
 GET   /signup                                    Onetime::App#signup

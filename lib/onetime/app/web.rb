@@ -9,6 +9,7 @@ module Onetime
     include Base
     require 'onetime/app/web/info'
     require 'onetime/app/web/account'
+    require 'onetime/app/web/chat'
 
     def index
       publically do

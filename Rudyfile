@@ -228,22 +228,22 @@ routines do
     remote do
       cd '/var/www/onetimesecret.com'
       # Note: here is an example for running thin on a port:
-      # thin :e, config_env, :R, 'config.ru', :p, '7143', 'start'
-      thin :e, config_env, :R, 'config.ru', :S, '/var/run/thin/thin.sock', :s, 2, 'start'
+      # thin :e, config_env, :R, 'config_app.ru', :p, '7143', 'start'
+      thin :e, config_env, :R, 'config_app.ru', :S, '/var/run/thin/thin.sock', :s, 2, 'start'
     end
   end
 
   restart_thin do
     remote do
       cd '/var/www/onetimesecret.com'
-      thin :e, config_env, :R, 'config.ru', :S, '/var/run/thin/thin.sock', :s, 2, 'restart'
+      thin :e, config_env, :R, 'config_app.ru', :S, '/var/run/thin/thin.sock', :s, 2, 'restart'
     end
   end
 
   stop_thin do
     remote do
       cd '/var/www/onetimesecret.com'
-      thin :e, config_env, :R, 'config.ru', :S, '/var/run/thin/thin.sock', :s, 2, 'stop'
+      thin :e, config_env, :R, 'config_app.ru', :S, '/var/run/thin/thin.sock', :s, 2, 'stop'
     end
   end
 

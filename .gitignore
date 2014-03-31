@@ -2,5 +2,5 @@
 log
 tmp
 .rudy
-
+npm-debug.log
 .DS_Store

@@ -209,6 +209,13 @@ module Onetime
           end
         end
       end
+      module Chat
+        class Index < Onetime::App::View
+          def init *args
+            self[:title] = "One-Time Chat"
+          end
+        end
+      end
       class UnknownSecret < Onetime::App::View
         def init
           self[:title] = "No such secret"

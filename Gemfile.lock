@@ -9,6 +9,8 @@ GEM
       xml-simple (>= 1.0.12)
     annoy (0.5.6)
       highline (>= 1.5.0)
+    async-rack (0.5.1)
+      rack (~> 1.1)
     attic (0.5.3)
     aws-s3 (0.6.3)
       builder
@@ -41,6 +43,9 @@ GEM
     gibbler (0.8.9)
       attic (>= 0.4.0)
     highline (1.6.19)
+    http_router (0.11.0)
+      rack (>= 1.0.0)
+      url_mount (~> 0.2.1)
     httparty (0.7.7)
       crack (= 0.1.8)
     i18n (0.6.9)
@@ -96,6 +101,8 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     uri-redis (0.4.2)
+    url_mount (0.2.1)
+      rack
     websocket-driver (0.3.2)
     xml-simple (1.1.2)
     yajl-ruby (1.1.0)
@@ -106,11 +113,13 @@ PLATFORMS
 DEPENDENCIES
   addressable (= 2.2.6)
   annoy (= 0.5.6)
+  async-rack (= 0.5.1)
   bcrypt-ruby (= 3.0.0)
   cramp (= 0.15.2)
   encryptor (= 1.1.3)
   familia (= 0.7.1)
   gibbler (= 0.8.9)
+  http_router (= 0.11.0)
   httparty (= 0.7.7)
   mail (= 2.5.4)
   mustache (= 0.99.3)
